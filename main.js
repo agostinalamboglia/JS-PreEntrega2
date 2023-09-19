@@ -12,7 +12,7 @@ class carrito{
         //array
         this.productos=[]; 
         this.cantMaxProd= 5;
-        this.totalAPagarMax= 10000;}
+        this.totalAPagarMax= 14000;}
 
         //metodos
         agregarProducto(producto, cantidad){
@@ -60,7 +60,7 @@ for (const producto of productos) {
 let productoSeleccionado;
 
 while(productoSeleccionado != 0){
-    productoSeleccionado = parseInt(prompt("Selecciona los artículos que deseas!        -presiona 0 para salir\n\n" + salida));
+    productoSeleccionado = parseInt(prompt("Selecciona los artículos que deseas! *Si tu compra supera los 5 items o si suma $14000+, tenes %10 de descuento.         -presiona 0 para salir\n\n" + salida));
     
     if (productoSeleccionado == 0){
         break;
