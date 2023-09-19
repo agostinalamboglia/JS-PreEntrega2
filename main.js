@@ -6,6 +6,11 @@ const productos = [
     {id:4, nombre:"zapatillas", precio:20000, imagen: "img"},
 ];
 
+function porcentaje(monto) {
+    let resultado = monto * 0.9
+    return resultado
+}
+
  //declaro clase carrito
 class carrito{
     constructor(){
@@ -41,7 +46,7 @@ class carrito{
             let total=this.totalAPagar();
 
             if ((this.totalProductos() > this.cantMaxProd) || (this.totalAPagar() > this.totalAPagarMax)){ //comparo
-                total = total * 0.9; //aplico descuento
+                total = porcentaje(total)//aplico descuento
             }
 
             return total;
